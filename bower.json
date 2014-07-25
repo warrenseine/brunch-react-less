@@ -1,0 +1,18 @@
+{
+  "name": "your-app",
+  "version": "0.1.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "react": "~0.10.0",
+    "react-router-component-bower": "https://github.com/andreypopp/react-router-component-bower.git"
+  },
+  "overrides": {
+    "react": {
+      "main": "react-with-addons.js"
+    }
+  }
+}

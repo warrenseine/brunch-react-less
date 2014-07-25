@@ -1,0 +1,31 @@
+{
+  "author": "Your Name",
+  "license": "MIT",
+  "name": "package-name",
+  "version": "0.0.1",
+  "description": "Package description.",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "forever": "latest",
+    "bower": "latest",
+    "brunch": "latest",
+    "coffee-script": "latest",
+    "es6-promise": "latest",
+    "coffee-script-brunch": "latest",
+    "javascript-brunch": "latest",
+    "css-brunch": "latest",
+    "less-brunch": "latest",
+    "auto-reload-brunch": "latest",
+    "uglify-js-brunch": "latest",
+    "clean-css-brunch": "latest",
+    "react-brunch": "latest"
+  },
+  "scripts": {
+    "start": "forever start -a -o log/out.log -e log/err.log --sourceDir node_modules/.bin brunch watch --server",
+    "stop": "forever stopall ; killall npm node nodejs 2> /dev/null"
+  }
+}
