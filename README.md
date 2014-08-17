@@ -1,36 +1,52 @@
-Brunch with React and Less
-==========================
+# Brunch React Skeleton
 
-A Brunch skeleton for cross-platform rapid development with React and Less. Just run `vagrant up` and edit the code.
+A Brunch skeleton for React.
 
-# Features
+## Features
 
-* CoffeeScript, Less, React auto-compilation
+* React
+* Sass
 * Auto-reload on save
-* Out-of-the-box Vagrant support (with hacks for Windows)
-* Forever support with logs so you don't wonder why your template doesn't rebuild
 * Brunch for building
 * Bower for front component management
+* Mocha testing
 
-# Installation
+## Installation
 
-For an isolated environment:
+```
+brunch new gh:banyan/brunch-react-coffee
+npm i
+bower i
+brunch watch --server
+```
 
-1. Install [Virtual Box](https://www.virtualbox.org/)
-2. Install [Vagrant](http://www.vagrantup.com/)
-3. Run `vagrant up` from a command line
-4. Open your browser at [http://localhost:3333](http://localhost:3333)
+## Usage
 
-On your local host computer:
+### Run
 
-1. `git clone https://github.com/warrenseine/brunch-react-less`
-2. `cd brunch-react-less`
-3. `npm install`
-4. `bower install`
-5. `npm start`
-6. `tail -f log/err.log` for error reporting
-7. Open your browser at [http://localhost:3333](http://localhost:3333)
+```
+brunch watch --server
+```
+
+### Build
+
+```
+brunch build
+brunch build --production
+```
+
+### Test
+
+Add test target file name at `test/initialize.coffee`
+
+```
+mocha-phantomjs public/test/index.html # or npm test (you need to build once before test)
+```
+
+# Credit
+
+This is based on warrenseine/brunch-react-less. Thanks.
 
 # Contribute
 
-`brunch-react-less` is MIT-licensed. Feel free to contribute.
+`brunch-react-skelton` is MIT-licensed. Feel free to contribute.
