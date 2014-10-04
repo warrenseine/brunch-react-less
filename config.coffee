@@ -1,10 +1,16 @@
+path = (paths) ->
+  # (\\/|\\\\) is (\|/), windows or unix-style directory separators
+  paths.join && paths = paths.join('|')
+  paths = paths.replace(/\//g, '(\\/|\\\\)')
+  new RegExp('^' + paths)
+  
 exports.config =
   plugins:
     react:
       autoIncludeCommentBlock: yes
       harmony: yes
   conventions:
-    assets:  /^app\/assets/
+    assets: path('app/assets')
   modules2:
     definition: false
     wrapper: false
