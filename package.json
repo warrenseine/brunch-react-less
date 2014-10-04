@@ -15,14 +15,13 @@
     "brunch": "latest",
     "coffee-script": "latest",
     "es6-promise": "latest",
-    "coffee-script-brunch": "latest",
     "javascript-brunch": "latest",
     "css-brunch": "latest",
     "less-brunch": "latest",
     "auto-reload-brunch": "latest",
     "uglify-js-brunch": "latest",
     "clean-css-brunch": "latest",
-    "react-brunch": "latest"
+    "cjsx-brunch": "latest"
   },
   "scripts": {
     "start": "forever start -a -o log/out.log -e log/err.log --sourceDir node_modules/.bin brunch watch --server",
